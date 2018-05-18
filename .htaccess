@@ -1,0 +1,23 @@
+#
+# QRfromFile .htaccess
+#
+# Copyright (c) 2018 Andre Trecksel https://andre.trecksel.de/
+#
+# Licensed under the MIT license: https://opensource.org/licenses/mit-license.php
+#
+
+AddDefaultCharset utf-8
+
+AddType text/vcard          .vcf
+
+<IfModule mod_rewrite.c>
+
+    RewriteCond  %{HTTP_HOST}    ^john\.sampleson\.net$    [NC]
+    RewriteRule  ^vCard$         "John Sampleson.vcf"      [NC,R=301,L]
+
+    RewriteCond  %{HTTP_HOST}    ^jane\.sampleson\.net$    [NC]
+    RewriteRule  ^vCard$         "Jane Sampleson.vcf"      [NC,R=301,L]
+
+    RewriteRule  ^qr$            path/to/qrff.php          [NC,L]
+
+</IfModule>
