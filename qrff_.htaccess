@@ -12,6 +12,9 @@ AddType text/vcard          .vcf
 
 <IfModule mod_rewrite.c>
 
+    # if HTTP host name (domain name entered in webbrowser) is 'john.sampleson.net'
+    # 'http(s)://john.sampleson.net/vcard' will redirect to 'http(s)://john.sampleson.net/John%20Sampleson.vcf'
+    # so (if AddType is set) the downloaded file’s name will be 'John Sampleson.vcf'.
     RewriteCond  %{HTTP_HOST}    ^john\.sampleson\.net$    [NC]
     RewriteRule  ^vCard$         "John Sampleson.vcf"      [NC,R=301,L]
 
