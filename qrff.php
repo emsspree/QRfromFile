@@ -16,7 +16,7 @@
 // URL: http://www.d-project.com/
 //
 // Licensed under the MIT license:
-//   http://www.opensource.org/licenses/mit-license.php
+//   https://opensource.org/licenses/mit-license.php
 //
 // The word "QR Code" is registered trademark of
 // DENSO WAVE INCORPORATED
