@@ -28,8 +28,7 @@
 
     // URL or local path to file to read its contents
 $source = $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['HTTP_HOST'] . '/vcard';
-    //print($source);
-
+    // Debug:  header("Content-type: text/plain"); print($source); exit();
 
     // QR code element size in pixels
 $elSize = 2;
@@ -59,7 +58,7 @@ try {
 
         // get contents
     $contents = contents($source);
-        // Debug:  header("Content-type: text/plain"); echo $contents;
+        // Debug:  header("Content-type: text/plain"); print($contents); exit();
 
     $qr = QRCode::getMinimumQRCode($contents, QR_ERROR_CORRECT_LEVEL_L);
 
