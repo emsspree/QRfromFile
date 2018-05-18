@@ -31,7 +31,7 @@ $source = $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['HTTP_HOST'] . '/vcard';
     // Debug:  header("Content-type: text/plain"); print($source); exit();
 
     // QR code element size in pixels
-$elSize = 2;
+$elSize = 3;
 
 
 # # # # # # # #
