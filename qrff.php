@@ -27,7 +27,7 @@
 
 
     // URL or local path to file to read its contents
-$source = $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['HTTP_HOST'] . '/vcard';
+$source = $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['HTTP_HOST'] . '/vcard.vcf';
     // Debug:  header("Content-type: text/plain"); print($source); exit();
 
     // QR code element size in pixels
